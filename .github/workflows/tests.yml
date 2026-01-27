@@ -31,7 +31,7 @@ jobs:
       - name: Prepare Pages folder
         run: |
           mkdir public
-          cp target/reports/Surefire.html public/index.html
+          cp target/reports/surefire.html public/index.html
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
