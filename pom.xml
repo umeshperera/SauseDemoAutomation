@@ -8,6 +8,9 @@
     <artifactId>SauseDemoAutomation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--Info-->
+    <url>https://github.com/umeshperera/SauseDemoAutomation</url>
+
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
@@ -18,6 +21,7 @@
         <junitVersion>6.0.2</junitVersion>
         <dataFakeVersion>2.5.3</dataFakeVersion>
         <surefirePluginVersion>3.5.4</surefirePluginVersion>
+        <slf4jVersion>2.0.12</slf4jVersion>
     </properties>
 
     <dependencies>
@@ -38,6 +42,11 @@
             <artifactId>datafaker</artifactId>
             <version>${dataFakeVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4jVersion}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -47,11 +56,18 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefirePluginVersion}</version>
             </plugin>
-            <!-- Generate HTML report -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.2.5</version>
+                <version>${surefirePluginVersion}</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
