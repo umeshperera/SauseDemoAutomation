@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir public
           cp -r target/reports/* public/
-          mv public/Surefire.html public/index.html
+          mv public/surefire.html public/index.html
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
