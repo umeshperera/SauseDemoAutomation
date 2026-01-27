@@ -28,10 +28,15 @@ jobs:
       - name: Run tests and generate report
         run: mvn clean verify
 
+      - name: Prepare Pages folder
+        run: |
+          mkdir public
+          cp target/reports/Surefire.html public/index.html
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: target/site
+          path: public
 
   deploy:
     needs: test
