@@ -1,0 +1,11 @@
+pages/CartPage.class
+pages/CheckoutPage.class
+tests/LogoutTest.class
+tests/LoginTest.class
+tests/CheckoutTest.class
+pages/OrderCompletePage.class
+pages/BillingInfoPage.class
+pages/DashboardPage.class
+tests/DashboardTest.class
+pages/LoginPage.class
+base/BaseTest.class
