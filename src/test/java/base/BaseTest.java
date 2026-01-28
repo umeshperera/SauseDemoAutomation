@@ -24,6 +24,9 @@ public class BaseTest {
 
             //Headless for CI
             if(ConfigReader.get("headless").equalsIgnoreCase("true")){
+                //Improvements for CI
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--headless=new");
             }
 
