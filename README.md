@@ -8,3 +8,9 @@
 
 ```bash
 mvn clean verify
+```
+
+## CI Report (GitHub Actions)
+
+To view a test report generated in the CI environment, visit  
+**[View CI Test Report](https://umeshperera.github.io/SauseDemoAutomation/)**
