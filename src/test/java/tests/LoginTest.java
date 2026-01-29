@@ -68,6 +68,6 @@ public class LoginTest extends BaseTest {
 
         //Verification
         dashboardPage.verifyVisibilityOfHeader();
-        Assertions.assertTrue(Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/inventory.html"));
+        Assertions.assertTrue(Objects.requireNonNull(driver.getCurrentUrl()).endsWith("/inventorys.html"));
     }
 }
