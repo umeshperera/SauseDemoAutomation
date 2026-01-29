@@ -29,17 +29,12 @@ jobs:
 
       - name: Run tests and generate report
         run: mvn clean verify
-        continue-on-error: true
 
       - name: Prepare Pages folder
-        run: |
-          mkdir -p public
-          if [ -d target/reports ]; then
-            cp -r target/reports/* public/
-          fi
-          if [ -f public/surefire.html ]; then
-            mv public/surefire.html public/index.html
-          fi
+        run: | 
+          mkdir public 
+          cp -r target/reports/* public/ 
+          mv public/surefire.html public/index.html
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
